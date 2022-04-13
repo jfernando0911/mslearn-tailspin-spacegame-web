@@ -15,10 +15,11 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-schedules:
-- cron: "0 3 * * 1-5" # cron syntax defining a schedule
-  displayName: Running at 3 in the morning from Monday to Friday # friendly name given to a specific schedule
-  branches:
-    include: 
-    - main # which branches the schedule applies to
-  always: true
+# Commented so it doesn't run indefinitely
+#schedules:
+#- cron: "0 3 * * 1-5" # cron syntax defining a schedule
+#  displayName: Running at 3 in the morning from Monday to Friday # friendly name given to a specific schedule
+#  branches:
+#    include: 
+#    - main # which branches the schedule applies to
+#  always: true
